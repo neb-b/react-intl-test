@@ -12,7 +12,10 @@ const Index = () => (
     <br />
     OK
     <br />
-    <FormattedMessage defaultMessage="learn react?" description="test description" />
+    <FormattedMessage
+      defaultMessage="This is a string to be translated"
+      description="this is a test description"
+    />
   </div>
 )
 

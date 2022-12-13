@@ -7,12 +7,12 @@
     "defaultMessage": "test",
     "description": "test description"
   },
+  "MDG/20": {
+    "defaultMessage": "This is a string to be translated",
+    "description": "this is a test description"
+  },
   "SxGDw9": {
     "defaultMessage": "test inside button",
     "description": "test inside button description"
-  },
-  "yyj2X9": {
-    "defaultMessage": "learn react?",
-    "description": "test description"
   }
 }
