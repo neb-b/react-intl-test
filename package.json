@@ -4,18 +4,18 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "extract": "formatjs extract 'src/**/*.js*' --ignore='**/*.d.ts' --out-file lang/en.json --id-interpolation-pattern '[sha512:contenthash:base64:6]'",
-    "extractt": "extract-messages -l=en,ja -o app/translations -d en --flat false 'src/**/*.js'"
+    "extract:i18n": "formatjs extract 'src/**/*.{tsx,ts}*' --out-file src/translations/en.json  --format simple --id-interpolation-pattern '[sha512:contenthash:base64:6]'",
+    "compile:i18n": "formatjs compile-folder --ast --format simple src/translations/ src/translations/compiled-locales",
+    "i18n": "npm run extract:i18n && npm run compile:i18n"
   },
   "dependencies": {
-    "babel-plugin-formatjs": "^10.3.35",
-    "extract-react-intl-messages": "^4.1.1",
     "next": "latest",
     "react": "latest",
     "react-dom": "latest",
     "react-intl": "^6.2.5"
   },
   "devDependencies": {
+    "babel-plugin-formatjs": "^10.3.35",
     "@formatjs/cli": "^5.1.7"
   }
 }
